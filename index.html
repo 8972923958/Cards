@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trading Card Game</h1>
+            <div class="game-info">
+                <span id="playerStatus">Waiting for connection...</span>
+            </div>
+        </header>
 
+        <main>
+            <!-- Opponent's board -->
+            <section class="board opponent-board">
+                <h2>Opponent</h2>
+                <div class="board-layout">
+                    <div class="void-area">
+                        <h3>Void</h3>
+                        <div id="opponentVoid" class="void-zone"></div>
+                    </div>
+
+                    <div class="field-area">
+                        <div class="deck-display">
+                            <div id="opponentDeck" class="deck">
+                                <span id="opponentDeckCount">50</span> cards
+                            </div>
+                        </div>
+
+                        <div class="attacker-area">
+                            <div id="opponentMainAttacker" class="main-attacker opponent-card">
+                                <span>Main Attacker</span>
+                            </div>
+                        </div>
+
+                        <div class="side-area">
+                            <div class="side-attackers" id="opponentSideAttackers"></div>
+                            <div class="healers" id="opponentHealers"></div>
+                        </div>
+
+                        <div class="traps-area">
+                            <div id="opponentTraps" class="traps"></div>
+                        </div>
+
+                        <div class="spell-area">
+                            <h3>Spells</h3>
+                            <div id="opponentSpells" class="spells"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Game log -->
+            <section class="game-log">
+                <h3>Game Log</h3>
+                <div id="gameLog" class="log-content">
+                    <p>Game started. Waiting for first move...</p>
+                </div>
+            </section>
+
+            <!-- Your board -->
+            <section class="board your-board">
+                <h2>Your Board</h2>
+                <div class="board-layout">
+                    <div class="field-area">
+                        <div class="deck-display">
+                            <div id="yourDeck" class="deck">
+                                <span id="yourDeckCount">50</span> cards
+                            </div>
+                        </div>
+
+                        <div class="attacker-area">
+                            <div id="yourMainAttacker" class="main-attacker your-card"></div>
+                        </div>
+
+                        <div class="side-area">
+                            <div class="side-attackers" id="yourSideAttackers"></div>
+                            <div class="healers" id="yourHealers"></div>
+                        </div>
+
+                        <div class="traps-area">
+                            <div id="yourTraps" class="traps"></div>
+                        </div>
+
+                        <div class="spell-area">
+                            <h3>Spells in Hand</h3>
+                            <div id="yourSpells" class="spells"></div>
+                        </div>
+                    </div>
+
+                    <div class="void-area">
+                        <h3>Your Void</h3>
+                        <div id="yourVoid" class="void-zone"></div>
+                    </div>
+                </div>
+
+                <!-- Your hand -->
+                <section class="your-hand">
+                    <h3>Your Hand</h3>
+                    <div id="yourHand" class="hand"></div>
+                </section>
+
+                <!-- Turn controls -->
+                <section class="turn-controls">
+                    <button id="drawCardsBtn" class="btn">Draw 2 Cards</button>
+                    <button id="endTurnBtn" class="btn primary">End Turn</button>
+                    <span id="turnInfo">Waiting for turn...</span>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Trading Card Game. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for card details -->
+    <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="cardDetails"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
