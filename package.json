@@ -1,19 +1,18 @@
 {
-  "name": "trading-card-game",
+  "name": "card-game",
   "version": "1.0.0",
-  "description": "A two-player trading card game with real-time multiplayer",
+  "description": "Two-player trading card game with WebSocket multiplayer",
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
     "dev": "nodemon server/app.js"
   },
-  "keywords": ["card-game", "trading-card", "multiplayer"],
+  "keywords": ["card-game", "trading-cards", "multiplayer"],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "ws": "^8.13.0",
-    "uuid": "^9.0.0"
+    "ws": "^8.13.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
