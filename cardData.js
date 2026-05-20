@@ -468,5 +468,16 @@ module.exports = {
   createDeck,
   shuffleDeck
 };
-
+const ATTACKERS = [
+  {
+    id: 'att_1',
+    name: 'Card Name',
+    species: SPECIES.BLACK_STAR,
+    hp: 150,
+    atk: 100,
+    sh: 80,
+    ability: 'Special ability description'
+  },
+  // Add more cards...
+];
 
